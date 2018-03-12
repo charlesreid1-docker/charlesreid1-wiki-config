@@ -167,7 +167,7 @@ $wgDefaultSkin = 'Bootstrap2';
 $wgValidSkinNames['bootstrap2'] = 'Bootstrap2';
 
 
-$wgShowExceptionDetails=true;
+$wgShowExceptionDetails=false;
 
 
 
