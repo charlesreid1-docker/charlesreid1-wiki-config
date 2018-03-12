@@ -167,7 +167,10 @@ $wgDefaultSkin = 'Bootstrap2';
 $wgValidSkinNames['bootstrap2'] = 'Bootstrap2';
 
 
-$wgShowExceptionDetails=false;
+//$wgShowExceptionDetails=false;
+$wgShowExceptionDetails = true;
+$wgShowDBErrorBacktrace = true;
+$wgShowSQLErrors = true;
 
 
 
@@ -229,7 +232,7 @@ $wgGroupPermissions['sysop']['reupload'] = true;
 
 
 
-
+/*
 ###############################
 ## GeSHi syntax highlighting/code extension
 #
@@ -266,6 +269,8 @@ wfLoadExtension( 'EmbedVideo' );
 # https://github.com/wikimedia/mediawiki-extensions-Math.git
 #
 require_once "$IP/extensions/Math/Math.php";
+ */
+
 
 
 #############################################
