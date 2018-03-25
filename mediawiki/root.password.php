@@ -1,3 +1,0 @@
-<?php
-$wgDBpassword = "zeno135";
-?>
