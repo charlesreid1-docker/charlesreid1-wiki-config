@@ -57,10 +57,10 @@ $wgEmailAuthentication = true;
 
 ## Database settings
 $wgDBtype = "mysql";
-$wgDBserver = "stormy_mysql";
-$wgDBname = "wikidb";
-$wgDBuser = "root";
-include("root.password.php");
+$wgDBserver = getenv('MYSQL_HOST');
+$wgDBname = getenv('MYSQL_DATABASE');
+$wgDBuser = getenv('MYSQL_USER');
+$wgDBpassword = getenv('MYSQL_PASSWORD');
 
 # MySQL specific settings
 $wgDBprefix = "";
