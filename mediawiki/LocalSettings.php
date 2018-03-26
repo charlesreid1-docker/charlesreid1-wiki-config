@@ -33,7 +33,7 @@ $wgUsePathInfo = true;        # Enable use of pretty URLs
 ## (like /w/index.php/Page_title to /wiki/Page_title) please see:
 ## https://www.mediawiki.org/wiki/Manual:Short_URL
 ## The protocol and server name to use in fully-qualified URLs
-$wgServer = "http://192.155.84.98";
+$wgServer = "http://45.56.87.232";
 
 ## The URL path to static resources (images, scripts, etc.)
 $wgStylePath = "$wgScriptPath/skins";
@@ -48,8 +48,8 @@ $wgLogo = "$wgResourceBasePath/resources/assets/wiki.png";
 $wgEnableEmail = true;
 $wgEnableUserEmail = true; # UPO
 
-$wgEmergencyContact = "apache@192.155.84.98";
-$wgPasswordSender = "apache@192.155.84.98";
+$wgEmergencyContact = "apache@45.56.87.232";
+$wgPasswordSender = "apache@45.56.87.232";
 
 $wgEnotifUserTalk = false; # UPO
 $wgEnotifWatchlist = false; # UPO
@@ -279,9 +279,9 @@ session_save_path("/tmp");
 
 ##############################################
 #### secure login
-$wgServer = "https://192.55.84.98";
+//$wgServer = "https://45.56.87.232";
 //$wgServer = "https://charlesreid1.com";
-$wgSecureLogin = true;
+//$wgSecureLogin = true;
 
 ###################################
 ##### raw html
