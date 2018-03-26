@@ -232,7 +232,6 @@ $wgGroupPermissions['sysop']['reupload'] = true;
 
 
 
-/*
 ###############################
 ## GeSHi syntax highlighting/code extension
 #
@@ -269,7 +268,6 @@ wfLoadExtension( 'EmbedVideo' );
 # https://github.com/wikimedia/mediawiki-extensions-Math.git
 #
 require_once "$IP/extensions/Math/Math.php";
- */
 
 
 
