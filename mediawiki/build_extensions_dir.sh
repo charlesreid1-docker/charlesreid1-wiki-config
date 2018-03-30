@@ -45,6 +45,10 @@ Extension="Math"
 if [ ! -d ${Extension} ]
 then
     git clone https://github.com/wikimedia/mediawiki-extensions-Math.git ${Extension}
+    (
+    cd ${Extension}
+    git checkout REL1_30
+    )
 else
     echo "Skipping ${Extension}"
 fi
