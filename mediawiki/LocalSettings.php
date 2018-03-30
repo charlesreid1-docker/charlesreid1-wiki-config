@@ -300,3 +300,19 @@ $wgNewUserLog=true;
 
 $wgRawHtml = true;
 
+
+
+
+
+$wgUploadPath = "$wgScriptPath/images";
+$wgUploadDirectory = "$IP/images";
+$wgMathPath = "$wgUploadPath/math";
+$wgMathDirectory = "$wgUploadDirectory/math";
+$wgTmpDirectory = "$wgUploadDirectory/tmp";
+$wgLatexCommand = "/usr/bin/latex"; 
+#$wgUploadBaseUrl = false; #not sure about why this one too...
+
+
+# log
+$wgDebugLogFile = "/var/log/apache2/wiki.log";
+
