@@ -121,7 +121,8 @@ $wgShellLocale = "en_US.utf8"; // charlesreid1.com version
 ## If you have the appropriate support software installed
 ## you can enable inline LaTeX equations:
 $wgUseTeX           = true;
-$wgTexvc = '/usr/bin/texvc';
+$wgTexvc = "$IP/extensions/Math/math/texvc";
+//$wgTexvc = '/usr/bin/texvc';
 
 $wgDefaultUserOptions['math'] = 0; //Always render eqns as .pngs
 
