@@ -747,7 +747,7 @@ img.thumbborder {
 	padding: 0 0 0 0;
 }
 
-#toctitle {
+#toctitle, .toctitle {
 	border-bottom: solid 1px #3c78b5;
     background-color: #333;
 	margin: 0 0 0 0;
@@ -770,14 +770,16 @@ img.thumbborder {
 	/*text-align: center;*/
 }
 
-div#toc {
+div#toc, div.toc {
     display: table-row;
 }
 
-#toctitle {
+#toctitle, .toctitle,
+#toc, .toc {
     padding: 10px;
 }
-#toc ul {
+#toc ul, 
+.toc ul {
     padding: 10px;
 }
 

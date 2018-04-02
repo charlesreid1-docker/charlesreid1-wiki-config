@@ -75,13 +75,11 @@ class Bootstrap2Template extends QuickTemplate {
 
         // -------- Start ------------
         // Adding the following line makes Geshi work
-		$this->html( 'headelement' );
+        $this->html( 'headelement' );
         // Left this out because the [edit] buttons were becoming right-aligned
         // Got around that behavior by changing shared.css
         // -------- End ------------
         // cmr 01-10-2014
-        echo "\n";
-        echo "\n";
 
 
 
@@ -95,21 +93,12 @@ array_shift($url_array); // remove first value as it's empty
 
 $p = "wiki";
 
-//include('/www/w/skins/Bootstrap2/header.php');
-
-include('/www/w/skins/Bootstrap2/navbar.php');
+// path, inside container
+include('/var/www/html/skins/Bootstrap2/navbar.php');
 
 ?>
     <!-- favicon -->
     <link rel="shortcut icon" href="/favicon.ico">
-
-<?php 
-/*
-<meta name="google-site-verification" content="-qtuJrevvkiUKRnq8xfXx2499jho1hp7aNS7vUlonOI" />
- */ 
-?>
-
-
 
 <div class="container">
 
@@ -250,11 +239,11 @@ include('/www/w/skins/Bootstrap2/navbar.php');
 </div>
 
 <?php
-include('/www/w/skins/Bootstrap2/footer.php');
+include('/var/www/html/skins/Bootstrap2/footer.php');
 ?>
 
 <?php
-    wfRestoreWarnings();
+        wfRestoreWarnings();
     } // end of execute() method
 
     /*************************************************************************************************/
