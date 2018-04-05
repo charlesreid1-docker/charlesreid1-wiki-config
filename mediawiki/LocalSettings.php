@@ -25,9 +25,8 @@ $wgMetaNamespace = "Charlesreid1";
 $wgScriptPath = "/w";      # Path to the actual files. This should already be there
 $wgArticlePath = "/wiki/$1";  # Virtual path. This directory MUST be different from the one used in $wgScriptPath
 $wgUsePathInfo = true;        # Enable use of pretty URLs
-## https://www.mediawiki.org/wiki/Manual:Short_URL
-#
-#
+
+
 ## The protocol and server name to use in fully-qualified URLs
 //$wgServer = "http://45.56.87.232";
 $wgServer = 'https://charlesreid1.com';
@@ -313,4 +312,5 @@ $wgLatexCommand = "/usr/bin/latex";
 
 # log
 $wgDebugLogFile = "/var/log/apache2/wiki.log";
+
 
