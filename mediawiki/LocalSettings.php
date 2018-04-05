@@ -25,15 +25,13 @@ $wgMetaNamespace = "Charlesreid1";
 $wgScriptPath = "/w";      # Path to the actual files. This should already be there
 $wgArticlePath = "/wiki/$1";  # Virtual path. This directory MUST be different from the one used in $wgScriptPath
 $wgUsePathInfo = true;        # Enable use of pretty URLs
-
-
-## The URL base path to the directory containing the wiki;
-## defaults for all runtime URL paths are based off of this.
-## For more information on customizing the URLs
-## (like /w/index.php/Page_title to /wiki/Page_title) please see:
 ## https://www.mediawiki.org/wiki/Manual:Short_URL
+#
+#
 ## The protocol and server name to use in fully-qualified URLs
-$wgServer = "http://45.56.87.232";
+//$wgServer = "http://45.56.87.232";
+$wgServer = 'https://charlesreid1.com';
+$wgCanonicalServer = 'https://charlesreid1.com';
 
 ## The URL path to static resources (images, scripts, etc.)
 $wgStylePath = "$wgScriptPath/skins";
@@ -48,8 +46,8 @@ $wgLogo = "$wgResourceBasePath/resources/assets/wiki.png";
 $wgEnableEmail = true;
 $wgEnableUserEmail = true; # UPO
 
-$wgEmergencyContact = "apache@45.56.87.232";
-$wgPasswordSender = "apache@45.56.87.232";
+$wgEmergencyContact = "charles@charlesreid1.com";
+$wgPasswordSender = "charles@charlesreid1.com";
 
 $wgEnotifUserTalk = false; # UPO
 $wgEnotifWatchlist = false; # UPO
