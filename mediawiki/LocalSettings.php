@@ -308,6 +308,7 @@ $wgMathDirectory = "$wgUploadDirectory/math";
 $wgTmpDirectory = "$wgUploadDirectory/tmp";
 $wgLatexCommand = "/usr/bin/latex"; 
 #$wgUploadBaseUrl = false; #not sure about why this one too...
+$wgVerifyMimeType = false;
 
 
 # log
