@@ -141,19 +141,20 @@ $wgRightsUrl = "";
 $wgRightsText = "";
 $wgRightsIcon = "";
 
+# Alternative:
+$wgEnableCreativeCommonsRdf = true;
+$wgRightsPage = ""; # Set to the title of a wiki page that describes your license/copyright
+$wgRightsUrl = "http://creativecommons.org/licenses/by-nc-nd/3.0/us/";
+$wgRightsText = "Attribution-NonCommercial-NoDerivs 3.0 United States";
+$wgRightsIcon = "/w/skins/charlesmartinreid/cc.png";
+# $wgRightsCode = "[license_code]"; # Not yet used
+#
+
 # Path to the GNU diff3 utility. Used for conflict resolution.
 $wgDiff3 = "/usr/bin/diff3";
 
 ## Default skin: you can change the default skin. Use the internal symbolic
 ## names, ie 'vector', 'monobook':
-$wgDefaultSkin = "vector";
-
-## Enabled skins.
-## The following skins were automatically enabled:
-#wfLoadSkin( 'CologneBlue' );
-#wfLoadSkin( 'Modern' );
-#wfLoadSkin( 'MonoBook' );
-#wfLoadSkin( 'Vector' );
 
 
 
@@ -165,10 +166,26 @@ $wgDefaultSkin = 'Bootstrap2';
 $wgValidSkinNames['bootstrap2'] = 'Bootstrap2';
 
 
-//$wgShowExceptionDetails=false;
-$wgShowExceptionDetails = true;
-$wgShowDBErrorBacktrace = true;
-$wgShowSQLErrors = true;
+$wgShowExceptionDetails=false;
+//$wgShowExceptionDetails = true;
+//$wgShowDBErrorBacktrace = true;
+//$wgShowSQLErrors = true;
+
+
+
+
+
+
+
+
+$wgDiff3 = "/usr/bin/diff3";
+
+# When you make changes to this configuration file, this will make
+# sure that cached pages are cleared.
+session_save_path("tmp");
+$wgCacheEpoch = max( $wgCacheEpoch, gmdate( 'YmdHis', @filemtime( __FILE__ ) ) );
+
+
 
 
 
@@ -245,7 +262,6 @@ $wgSyntaxHighlightDefaultLang = "text";
 #
 # http://www.mediawiki.org/wiki/Extension:ParserFunctions
 # http://en.wikipedia.org/wiki/Template_talk:Navbox
-# # 
 require_once( "$IP/extensions/ParserFunctions/ParserFunctions.php" );
 
 
@@ -253,7 +269,6 @@ require_once( "$IP/extensions/ParserFunctions/ParserFunctions.php" );
 
 ##############################################
 # Embed videos extension
-#
 # https://github.com/HydraWiki/mediawiki-embedvideo/
 #require_once("$IP/extensions/EmbedVideo/EmbedVideo.php");
 wfLoadExtension( 'EmbedVideo' );
@@ -275,9 +290,8 @@ session_save_path("/tmp");
 
 ##############################################
 #### secure login
-//$wgServer = "https://45.56.87.232";
-//$wgServer = "https://charlesreid1.com";
-//$wgSecureLogin = true;
+$wgServer = "https://charlesreid1.com";
+$wgSecureLogin = true;
 
 ###################################
 ##### raw html
