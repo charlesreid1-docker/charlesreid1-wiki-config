@@ -103,9 +103,9 @@ $wgCheckFileExtensions = false;
 # do not send pingback to https://www.mediawiki.org
 $wgPingback = false;
 
-## If you use ImageMagick (or any other shell command) on a
-## Linux server, this will need to be set to the name of an
-## available UTF-8 locale
+# If you use ImageMagick (or any other shell command) on a
+# Linux server, this will need to be set to the name of an
+# available UTF-8 locale
 //$wgShellLocale = "C.UTF-8"; // modern 
 $wgShellLocale = "en_US.utf8"; // charlesreid1.com version
 
@@ -125,7 +125,7 @@ $wgDefaultUserOptions['math'] = 0; //Always render eqns as .pngs
 # Site language code, should be one of the list in ./languages/data/Names.php
 $wgLanguageCode = "en";
 
-$wgSecretKey = "45444e05f16d997d61be11eba4d6f8739dc632a6af4829f5b8fb88f3eac5e0fb";
+$wgSecretKey = getenv('MEDIAWIKI_SECRETKEY');
 
 # Changing this will log out all existing sessions.
 $wgAuthenticationTokenVersion = "1";
@@ -289,7 +289,7 @@ session_save_path("/tmp");
 
 ##############################################
 #### secure login
-$wgServer = "https://{{ top_domain }}";
+$wgServer = "https://{{ server_name_default }}";
 $wgSecureLogin = true;
 
 ###################################
