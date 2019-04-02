@@ -28,9 +28,8 @@ $wgUsePathInfo = true;        # Enable use of pretty URLs
 
 
 ## The protocol and server name to use in fully-qualified URLs
-//$wgServer = "http://45.56.87.232";
-$wgServer = 'https://charlesreid1.com';
-$wgCanonicalServer = 'https://charlesreid1.com';
+$wgServer = 'https://';
+$wgCanonicalServer = 'https://';
 
 ## The URL path to static resources (images, scripts, etc.)
 $wgStylePath = "$wgScriptPath/skins";
@@ -66,8 +65,8 @@ $wgDBprefix = "";
 $wgDBTableOptions = "ENGINE=InnoDB, DEFAULT CHARSET=binary";
 
 # Experimental charset support for MySQL 5.0.
-$wgDBmysql5 = false; // new version
-$wgDBmysql5 = true; // charlesreid1.com current
+//$wgDBmysql5 = false; // new version
+$wgDBmysql5 = true; // true on charlesreid1.com
 
 ## Shared memory settings
 $wgMainCacheType = CACHE_ACCEL;
@@ -104,9 +103,9 @@ $wgCheckFileExtensions = false;
 # do not send pingback to https://www.mediawiki.org
 $wgPingback = false;
 
-## If you use ImageMagick (or any other shell command) on a
-## Linux server, this will need to be set to the name of an
-## available UTF-8 locale
+# If you use ImageMagick (or any other shell command) on a
+# Linux server, this will need to be set to the name of an
+# available UTF-8 locale
 //$wgShellLocale = "C.UTF-8"; // modern 
 $wgShellLocale = "en_US.utf8"; // charlesreid1.com version
 
@@ -126,7 +125,7 @@ $wgDefaultUserOptions['math'] = 0; //Always render eqns as .pngs
 # Site language code, should be one of the list in ./languages/data/Names.php
 $wgLanguageCode = "en";
 
-$wgSecretKey = "45444e05f16d997d61be11eba4d6f8739dc632a6af4829f5b8fb88f3eac5e0fb";
+$wgSecretKey = getenv('MEDIAWIKI_SECRETKEY');
 
 # Changing this will log out all existing sessions.
 $wgAuthenticationTokenVersion = "1";
@@ -203,7 +202,7 @@ $wgAllowExternalImages = true;
 # Use ImageMagick
 $wgUseImageMagic=true;
 
-# $wgAllowDisplayTitle - Allow the magic word {{DISPLAYTITLE:}} to override the title of a page.
+# $wgAllowDisplayTitle - Allow the magic word { { DISPLAYTITLE: } } to override the title of a page.
 $wgAllowdisplayTitle=true;
 
 # $wgPutIPinRC - Log IP addresses in the recentchanges table.
@@ -290,7 +289,7 @@ session_save_path("/tmp");
 
 ##############################################
 #### secure login
-$wgServer = "https://charlesreid1.com";
+$wgServer = "https://";
 $wgSecureLogin = true;
 
 ###################################
@@ -327,5 +326,4 @@ $wgVerifyMimeType = false;
 
 # log
 $wgDebugLogFile = "/var/log/apache2/wiki.log";
-
 
