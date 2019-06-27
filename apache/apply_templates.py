@@ -27,13 +27,14 @@ OVERWRITE = True
 
 env = Environment(loader=FileSystemLoader('.'))
 
-tfile = 'LocalSettings.php.j2'
+tfile = 'charlesreid1.wiki.conf.j2'
 
 content = env.get_template(tfile).render({
-    "server_name_default" : "charlesreid1.com"
+    "server_name_default" : "charlesreid1.com",
+    "admin_email" : "charles@charlesreid1.com"
 })
 
 # Write to file
-with open('LocalSettings.php','w') as f:
+with open('charlesreid1.wiki.conf','w') as f:
     f.write(content)
 
