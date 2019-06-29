@@ -1,5 +1,4 @@
 ServerName {{ server_name_default }}
-ServerAlias www.{{ server_name_default }}
 
 Listen 8989
 
@@ -7,6 +6,8 @@ Listen 8989
     # nginx reverse proxy 
     # talks to apache via 127.0.0.1
     # on port 8989
+
+    ServerAlias www.{{ server_name_default }}
 
     LogLevel warn
     ServerAdmin {{ admin_email }}
