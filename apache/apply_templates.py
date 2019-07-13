@@ -28,6 +28,7 @@ OVERWRITE = True
 env = Environment(loader=FileSystemLoader('.'))
 
 tfile = 'charlesreid1.wiki.conf.j2'
+rfile = 'charlesreid1.wiki.conf'
 
 content = env.get_template(tfile).render({
     "server_name_default" : "charlesreid1.com",
@@ -35,6 +36,9 @@ content = env.get_template(tfile).render({
 })
 
 # Write to file
-with open('charlesreid1.wiki.conf','w') as f:
-    f.write(content)
+if os.path.exists(rfile) and not OVERWRITE:
+    raise Exception("Error: file %s already exists!"%(rfile))
+else:
+    with open(rfile,'w') as f:
+        f.write(content)
 

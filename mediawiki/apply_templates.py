@@ -28,12 +28,16 @@ OVERWRITE = True
 env = Environment(loader=FileSystemLoader('.'))
 
 tfile = 'LocalSettings.php.j2'
+rfile = 'LocalSettings.php'
 
 content = env.get_template(tfile).render({
     "server_name_default" : "charlesreid1.com"
 })
 
 # Write to file
-with open('LocalSettings.php','w') as f:
-    f.write(content)
+if os.path.exists(rfile) and not OVERWRITE:
+    raise Exception("Error: file %s already exists!"%(rfile))
+else:
+    with open(rfile,'w') as f:
+        f.write(content)
 
