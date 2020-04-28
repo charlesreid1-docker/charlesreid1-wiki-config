@@ -70,9 +70,6 @@ class Bootstrap2Template extends QuickTemplate {
         $this->skin = $skin = $this->data['skin'];
         $action = $wgRequest->getText( 'action' );
 
-        // Suppress warnings to prevent notices about missing indexes in $this->data
-        wfSuppressWarnings();
-
         // -------- Start ------------
         // Adding the following line makes Geshi work
         $this->html( 'headelement' );
@@ -243,7 +240,6 @@ include('/var/www/html/skins/Bootstrap2/footer.php');
 ?>
 
 <?php
-        wfRestoreWarnings();
     } // end of execute() method
 
     /*************************************************************************************************/
